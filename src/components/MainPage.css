@@ -11,7 +11,8 @@
 #banner > img{width: 100%;}
 
 #product-list{display: flex;flex-wrap: wrap;}
-.product-card{width: 180px;height: 310px;border: 1px solid rgba(230,230,230,1);margin-right: 12px;margin-bottom: 12px;}
+.product-card{width: 180px;/* height: 310px; */border: 1px solid rgba(230,230,230,1);margin-right: 12px;margin-bottom: 12px;}
+.product-link{color: #333;}
 .product-card .product-img{width: 100%;height: 210px;}
 .product-card .product-contents{padding: 8px;display: flex;flex-direction: column;}
 .product-card .product-contents .product-name{font-size: 14px;color: #666;}
