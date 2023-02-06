@@ -1,16 +1,20 @@
 import MainPage from './components/MainPage';
 import React from 'react';
-import {Route, Routes, Link} from 'react-router-dom';
+import {Route, Routes, Link, useNavigate} from 'react-router-dom';
 import ProductPage from './components/ProductPage';
 import UploadPage from './components/UploadPage';
+import { Button } from "antd";
+import {UploadOutlined} from '@ant-design/icons';
 
 
 function App() {
+  let navigate=useNavigate();
   return (
     <div className="App">
         <div id="header">
             <div id="header-area">
                 <Link to='/'><img src="./images/icons/logo.png" alt="logo" /></Link>
+                <Button size='large' icon={<UploadOutlined />} onClick={() => {navigate('/UploadPage')}}>상품 업로드</Button>
             </div>
         </div>
         <div id="body"> 

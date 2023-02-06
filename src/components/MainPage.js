@@ -6,7 +6,8 @@ import {Link} from 'react-router-dom'
 const MainPage = () => {
     let [products, setProduct] = React.useState([]);
     useEffect(() => {
-        axios.get("https://4496436b-673e-4e72-960e-1d4e7c4bc692.mock.pstmn.io/products")//postman으로 만든 json data mockSever url
+        axios.get("http://localhost:8080/products")//https가 아닌 http
+        /* axios.get("https://4496436b-673e-4e72-960e-1d4e7c4bc692.mock.pstmn.io/products") *///postman으로 만든 json data mockSever url
     .then((result) => {//데이터 잘가져왔을때
         const products=result.data.products;
         setProduct(products)
