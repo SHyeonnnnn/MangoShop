@@ -10,12 +10,12 @@ function UploadPage() {
    const history = useNavigate ();
    const onSubmit = (values) => {
       axios
-         .post(`${API_URL}/products`, {//데이터베이스에 업로드되는
+         .post(`${API_URL}/products`, {
             name: values.name,
             description: values.description,
             seller: values.seller,
             price: parseInt(values.price), //문자형을 숫자로 변경
-            imageUrl: imageUrl,
+            imageUrl: `${API_URL}/${imageUrl}`,
          })
          .then((result) => {
             console.log(result);
@@ -52,7 +52,7 @@ function UploadPage() {
                </Upload>
             </Form.Item>
             <Divider />
-            <Form.Item label={<div className="upload-label">판매자</div>} name="seller" rules={[{ required: true, message: "판매자명을 입력해주세요" }]}>
+            <Form.Item label={<div className="upload-label">판매자명</div>} name="seller" rules={[{ required: true, message: "판매자명을 입력해주세요" }]}>
                <Input className="upload-name" size="large" placeholder="이름을 입력해주세요" />
             </Form.Item>
             <Divider />

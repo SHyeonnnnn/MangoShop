@@ -1,6 +1,7 @@
-#back-btn{display: flex;margin: 20px auto; padding: 10px 20px;background: #ccc;border: none;outline: none;}
-#image-box{height: 300px;text-align: center;
-    img{height: 100%;}
+#back-btn{display: flex; color: #e2e7eb;  text-shadow: 0 1px 1px #9f9696; margin: 20px auto; padding: 10px 20px; cursor: pointer; background: #da6c6c;border: none;outline: none;border-radius: 30px; box-shadow: 0 1px 3px #373434;}
+#back-btn:hover,#back-btn:active{background: #bd8f8f; box-shadow: none;}
+#image-box{max-height: 300px; max-width:100%; width: 100%; text-align: center;
+    img{max-height: 300px; min-width: 300px;}
 }
 #profile-box{
     padding: 16px;
@@ -20,8 +21,9 @@
 }
 #contents-box{
     padding: 16px;
-    #name{font-size: 20px;font-weight: 400;}
-    #price{font-size: 16px;font-weight: 600;}
+    #name{font-size: 20px;font-weight: 400;margin-bottom: 10px;}
+    #price{font-size: 16px;font-weight: 600;margin-bottom: 5px;}
     #createAt{font-size: 12px;font-weight: 600;color: rgb(204, 204, 204);}
+    .purchase{margin: 20px 0 0;}
     #description{margin-top: 16px;}
 }
